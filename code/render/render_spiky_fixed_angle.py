@@ -5,7 +5,7 @@ from qgis.core import *
 from qgis._3d import *
 from qgis.PyQt.QtGui import QColor
 from qgis.PyQt.QtCore import QSize
-D=r"C:\Users\Chinmoy Gosh\Documents\Chattogram_LST_3D\district_2015_2025"; R=os.path.join(D,"render"); FR=os.path.join(R,"tmp2")
+D=r"path/to/your/project/folder"; R=os.path.join(D,"render"); FR=os.path.join(R,"tmp2")
 os.makedirs(FR,exist_ok=True)
 g=json.load(open(os.path.join(R,"grid90.json"))); INS=np.load(os.path.join(R,"inside90.npy"))
 def box(a,k):

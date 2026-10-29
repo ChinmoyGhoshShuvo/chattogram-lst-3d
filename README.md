@@ -59,15 +59,22 @@ An animated 3D surface of April land surface temperature (LST) across Chattogram
 
 ![Yearly distribution](images/lst-yearly-distribution-2015-2025.png)
 
-**Caveats:** 2016 (89% coverage) and 2019 still contain cloud-affected cold patches, and some years show faint seams where scenes from different dates meet. Each year is a multi-date composite, sometimes including March or May. LST is the temperature of the ground surface, not the air.
+**Notes:** each year is a multi-date composite, sometimes including March or May. LST is the temperature of the ground surface, not the air.
 
 ## Code
 
 - [`code/build_april_lst.py`](code/build_april_lst.py): searches the Planetary Computer STAC, downloads the scenes, masks them and builds the yearly 30 m composites. Requires GDAL.
 - [`code/render/render_spiky_fixed_angle.py`](code/render/render_spiky_fixed_angle.py): builds the spiky height and colour rasters and renders the 3D frames inside QGIS from a fixed camera angle.
+- [`code/render/render_helpers_smooth.py`](code/render/render_helpers_smooth.py): an earlier render with a smoothed surface and a rotating camera, kept for comparison with the spiky version.
 - [`viz/make_figures.py`](viz/make_figures.py): builds the three analysis figures above from the 30 m GeoTIFFs and writes `viz/data/yearly_land_stats.csv`.
 
-Set the `OUT` / `D` folder paths at the top of each script to your own project folder before running.
+**Extension: April–May, 2000–2025 (Landsat 5 and 8)**
+
+- [`code/gee/GEE_Chattogram_LST_AprMay_L5_L8.js`](code/gee/GEE_Chattogram_LST_AprMay_L5_L8.js): Google Earth Engine script that builds April–May LST composites for 2000–2010 (Landsat 5 TM) and 2015–2025 (Landsat 8 OLI/TIRS), bringing Landsat 5 onto the Landsat 8 scale through Landsat 7 ETM+, and exports them to Google Drive.
+- [`code/aprmay_2000_2025/build_display_stack.py`](code/aprmay_2000_2025/build_display_stack.py): turns the Earth Engine exports into a 90 m display stack and yearly statistics.
+- [`code/aprmay_2000_2025/render/render_aprmay.py`](code/aprmay_2000_2025/render/render_aprmay.py): renders the 2000–2025 3D frames inside QGIS.
+
+Set the `OUT` / `D` / `BASE` folder paths at the top of each script to your own project folder before running. In the Earth Engine script, set `DISTRICT_ASSET` to your own uploaded district boundary.
 
 ## Tools
 

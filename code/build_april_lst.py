@@ -7,7 +7,7 @@ from osgeo import gdal, ogr, osr
 gdal.UseExceptions()
 gdal.SetConfigOption("GDAL_DISABLE_READDIR_ON_OPEN","EMPTY_DIR")
 gdal.SetConfigOption("GDAL_HTTP_MAX_RETRY","5"); gdal.SetConfigOption("GDAL_HTTP_RETRY_DELAY","3")
-OUT=r"C:\Users\Chinmoy Gosh\Documents\Chattogram_LST_3D\district_2015_2025"
+OUT=r"path/to/your/project/folder"
 BND=os.path.join(OUT,"Chattogram_District_boundary.gpkg")
 LOG=os.path.join(OUT,"processing_log.txt")
 STAC="https://planetarycomputer.microsoft.com/api/stac/v1"
