@@ -8,7 +8,7 @@ An animated 3D surface of April land surface temperature (LST) across Chattogram
 
 ![3D animation preview](images/chattogram-lst-3d-preview.gif)
 
-*Preview. Full 28-second video: [`images/chattogram-lst-3d-2015-2025.mp4`](images/chattogram-lst-3d-2015-2025.mp4). Side panels track the district median LST and the April urban heat island intensity (SUHII, MODIS) from my Chattogram–Karachi conference study.*
+*Preview. Full 28-second video: [`images/chattogram-lst-3d-2015-2025.mp4`](Chattogram_District_AprMay_LST_2000-2025_3D.mp4). Side panels track the district median LST and the April urban heat island intensity (SUHII, MODIS) from my Chattogram–Karachi conference study.*
 
 ## Study area
 
